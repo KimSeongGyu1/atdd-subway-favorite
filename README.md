@@ -1,3 +1,7 @@
+# Travis 연동
+
+[![Build Status](https://travis-ci.org/KimSeongGyu1/atdd-subway-favorite.svg?branch=master)](https://travis-ci.org/KimSeongGyu1/atdd-subway-favorite)
+
 # 1단계 - 회원관리 기능
 
 ## 요구 사항
