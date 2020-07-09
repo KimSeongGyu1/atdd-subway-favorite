@@ -45,6 +45,7 @@ ext {
 test {
 	useJUnitPlatform()
 	outputs.dir snippetsDir
+	finalizedBy 'jacocoTestReport'
 }
 
 asciidoctor {
@@ -59,9 +60,44 @@ bootJar {
 	}
 }
 
+jacoco {
+	toolVersion = "0.8.5"
+}
+
 jacocoTestReport {
 	reports {
 		xml.enabled = true
 		html.enabled = true
+	}
+
+	finalizedBy 'jacocoTestCoverageVerification'
+}
+
+jacocoTestCoverageVerification {
+	violationRules {
+		rule {
+			enabled = true
+			element = 'CLASS'
+
+			limit {
+				counter = 'INSTRUCTION'
+				value = 'COVEREDRATIO'
+				minimum = 0.70
+			}
+
+			includes = ['*.subdway.*']
+		}
+
+		rule {
+			element = 'METHOD'
+
+			limit {
+				counter = 'LINE'
+				value = 'TOTALCOUNT'
+				maximum = 22
+			}
+
+			includes = ['*.domain.*']
+		}
 	}
 }
