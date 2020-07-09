@@ -1,6 +1,8 @@
-# Travis 연동
+# Travis, coveralls 연동
 
 [![Build Status](https://travis-ci.org/KimSeongGyu1/atdd-subway-favorite.svg?branch=master)](https://travis-ci.org/KimSeongGyu1/atdd-subway-favorite)
+[![Coverage Status](https://coveralls.io/repos/github/KimSeongGyu1/atdd-subway-favorite/badge.svg?branch=master)](https://coveralls.io/github/KimSeongGyu1/atdd-subway-favorite?branch=master)
+
 
 # 1단계 - 회원관리 기능
 
